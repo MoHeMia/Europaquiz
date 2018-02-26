@@ -1,0 +1,12 @@
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.exe.config
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.exe
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.pdb
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\bin\Debug\Svg.dll
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\bin\Debug\Svg.pdb
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\bin\Debug\Svg.xml
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csprojResolveAssemblyReference.cache
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Form1.resources
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Properties.Resources.resources
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csproj.GenerateResource.Cache
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.exe
+E:\Info\Projekt Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.pdb
