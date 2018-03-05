@@ -18,10 +18,5 @@ namespace Projekt_Europaquiz
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Random rnd = new Random();
-
-        }
     }
 }
