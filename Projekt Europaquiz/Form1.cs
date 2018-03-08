@@ -15,12 +15,6 @@ namespace Projekt_Europaquiz
 
     public partial class Form1 : Form
     {
-        Size originalSize;
-        Point originalLocation;
-        FormBorderStyle originalFormBorderStyle;
-
-
-
         /// <summary>
         /// The file path of the SVG image selected.
         /// </summary>
@@ -46,8 +40,6 @@ namespace Projekt_Europaquiz
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-
-
 
 
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
