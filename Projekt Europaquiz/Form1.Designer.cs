@@ -30,10 +30,10 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SvgImage = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -56,15 +56,15 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Willkommen bei unserem Europaquiz, wie gut kennen sie Europa finden Sie es raus.";
             // 
-            // pictureBox2
+            // SvgImage
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 151);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(398, 311);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.SvgImage.BackColor = System.Drawing.Color.White;
+            this.SvgImage.Location = new System.Drawing.Point(12, 151);
+            this.SvgImage.Name = "SvgImage";
+            this.SvgImage.Size = new System.Drawing.Size(398, 311);
+            this.SvgImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SvgImage.TabIndex = 3;
+            this.SvgImage.TabStop = false;
             // 
             // textBox2
             // 
@@ -81,7 +81,7 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(659, 474);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.SvgImage);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -89,7 +89,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +99,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox SvgImage;
         private System.Windows.Forms.TextBox textBox2;
     }
 }

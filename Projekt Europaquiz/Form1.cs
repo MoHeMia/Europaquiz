@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Svg;
 
 
 namespace Projekt_Europaquiz
@@ -17,15 +18,42 @@ namespace Projekt_Europaquiz
         Size originalSize;
         Point originalLocation;
         FormBorderStyle originalFormBorderStyle;
+
+
+
+        /// <summary>
+        /// The file path of the SVG image selected.
+        /// </summary>
+        private string selectedPath;
+
+        /// <summary>
+        /// Instance reference for the svgDocument used and updated throughout the manipulation of the image.
+        /// </summary>
+        private Svg.SvgDocument svgDocument;
+
+
+
         public Form1()
         {
             InitializeComponent();
         }
 
+
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+
+
+
+
+            SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
+            selectedPath = "D:\\Europaquiz\\Europa.svg";
+            svgDocument = SVGParser.GetSvgDocument(selectedPath);
+            SvgImage.Image =SVGParser.GetBitmapFromSVG(selectedPath);
         }
 
 
