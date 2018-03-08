@@ -37,3 +37,12 @@ E:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csprojResolveAssem
 E:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Form1.resources
 E:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Properties.Resources.resources
 E:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csproj.GenerateResource.Cache
+D:\Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.exe
+D:\Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.pdb
+D:\Europaquiz\Projekt Europaquiz\bin\Debug\Svg.dll
+D:\Europaquiz\Projekt Europaquiz\bin\Debug\Svg.pdb
+D:\Europaquiz\Projekt Europaquiz\bin\Debug\Svg.xml
+D:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csprojResolveAssemblyReference.cache
+D:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Form1.resources
+D:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Properties.Resources.resources
+D:\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csproj.GenerateResource.Cache
