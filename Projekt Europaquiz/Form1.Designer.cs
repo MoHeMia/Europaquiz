@@ -65,7 +65,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // textBox2
             // 
@@ -74,7 +73,6 @@
             this.textBox2.Size = new System.Drawing.Size(69, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Timer: 00:00";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Form1
             // 

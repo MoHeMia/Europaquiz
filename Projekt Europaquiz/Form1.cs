@@ -22,49 +22,12 @@ namespace Projekt_Europaquiz
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
-
-            private void OnToggleFullScreen(object sender, EventArgs e)
-        {
-            if (this.Size != SystemInformation.PrimaryMonitorSize)
-            {
-                originalSize = this.Size;
-                originalLocation = this.Location;
-                originalFormBorderStyle = this.FormBorderStyle;
-
-                this.TopMost = true;
-                this.FormBorderStyle = FormBorderStyle.None;
-
-                this.Size = SystemInformation.PrimaryMonitorSize;
-                this.Location = new Point(0, 0);
-            }
-            else
-            {
-                this.TopMost = false;
-                this.Size = originalSize;
-                this.Location = originalLocation;
-                this.FormBorderStyle = originalFormBorderStyle;
-            }
-        } 
 
     }
  }
