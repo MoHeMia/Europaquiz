@@ -44,7 +44,13 @@ namespace Projekt_Europaquiz
             selectedPath = "D:\\Europaquiz\\Europa.svg";
             svgDocument = SVGParser.GetSvgDocument(selectedPath);
             SvgImage.Image =SVGParser.GetBitmapFromSVG(selectedPath);
+            
+            
         }
+
+
+
+       
     }
  }
 
