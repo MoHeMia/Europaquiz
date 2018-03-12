@@ -37,8 +37,8 @@ namespace Projekt_Europaquiz
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            SvgImage.Width = 1800;
-            SvgImage.Height = 900;
+            SvgImage.Width = 1200;
+            SvgImage.Height = 850;
 
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
             selectedPath = "D:\\Europaquiz\\Europa.svg";
