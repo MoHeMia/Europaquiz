@@ -32,23 +32,19 @@ namespace Projekt_Europaquiz
             InitializeComponent();
         }
 
-
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+            SvgImage.Width = 1800;
+            SvgImage.Height = 900;
 
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
             selectedPath = "D:\\Europaquiz\\Europa.svg";
             svgDocument = SVGParser.GetSvgDocument(selectedPath);
             SvgImage.Image =SVGParser.GetBitmapFromSVG(selectedPath);
         }
-
-
     }
  }
 

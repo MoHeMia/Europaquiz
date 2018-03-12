@@ -60,16 +60,16 @@
             // SvgImage
             // 
             this.SvgImage.BackColor = System.Drawing.Color.White;
-            this.SvgImage.Location = new System.Drawing.Point(12, 151);
+            this.SvgImage.Location = new System.Drawing.Point(12, 149);
             this.SvgImage.Name = "SvgImage";
-            this.SvgImage.Size = new System.Drawing.Size(398, 311);
+            this.SvgImage.Size = new System.Drawing.Size(366, 301);
             this.SvgImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SvgImage.TabIndex = 3;
             this.SvgImage.TabStop = false;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(416, 179);
+            this.textBox2.Location = new System.Drawing.Point(416, 12);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(69, 20);
             this.textBox2.TabIndex = 4;
@@ -80,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(659, 474);
+            this.ClientSize = new System.Drawing.Size(697, 480);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.SvgImage);
             this.Controls.Add(this.textBox1);
