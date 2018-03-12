@@ -52,6 +52,7 @@
             this.textBox1.Location = new System.Drawing.Point(6, 12);
             this.textBox1.MaximumSize = new System.Drawing.Size(800, 600);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Willkommen bei unserem Europaquiz, wie gut kennen sie Europa finden Sie es raus.";
