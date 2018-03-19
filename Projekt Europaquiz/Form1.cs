@@ -48,9 +48,23 @@ namespace Projekt_Europaquiz
             
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void BT_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-       
+        private void Optionen_Button_Click(object sender, EventArgs e)
+        {
+            Optionen option = new Optionen();
+            option.Show();
+            option.Focus();
+        }
     }
- }
+}
+
 

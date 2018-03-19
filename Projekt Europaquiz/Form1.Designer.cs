@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SvgImage = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ZT = new System.Windows.Forms.Timer(this.components);
+            this.Optionen_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
             this.SuspendLayout();
@@ -39,9 +42,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(489, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(491, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -55,7 +59,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Willkommen bei unserem Europaquiz, wie gut kennen sie Europa finden Sie es raus.";
+            this.textBox1.Text = "Willkommen bei unserem Europaquiz, wie gut kennen Sie Europa finden Sie es raus.";
             // 
             // SvgImage
             // 
@@ -63,7 +67,7 @@
             this.SvgImage.Location = new System.Drawing.Point(12, 149);
             this.SvgImage.Name = "SvgImage";
             this.SvgImage.Size = new System.Drawing.Size(366, 301);
-            this.SvgImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SvgImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.SvgImage.TabIndex = 3;
             this.SvgImage.TabStop = false;
             // 
@@ -75,6 +79,21 @@
             this.textBox2.Size = new System.Drawing.Size(69, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Timer: 00:00";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // ZT
+            // 
+            this.ZT.Interval = 1000;
+            // 
+            // Optionen_Button
+            // 
+            this.Optionen_Button.Location = new System.Drawing.Point(416, 38);
+            this.Optionen_Button.Name = "Optionen_Button";
+            this.Optionen_Button.Size = new System.Drawing.Size(69, 23);
+            this.Optionen_Button.TabIndex = 5;
+            this.Optionen_Button.Text = "Optionen";
+            this.Optionen_Button.UseVisualStyleBackColor = true;
+            this.Optionen_Button.Click += new System.EventHandler(this.Optionen_Button_Click);
             // 
             // Form1
             // 
@@ -82,6 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(697, 480);
+            this.Controls.Add(this.Optionen_Button);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.SvgImage);
             this.Controls.Add(this.textBox1);
@@ -103,6 +123,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox SvgImage;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Timer ZT;
+        private System.Windows.Forms.Button Optionen_Button;
     }
 }
 
