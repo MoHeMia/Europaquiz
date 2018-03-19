@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SvgImage = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ZT = new System.Windows.Forms.Timer(this.components);
+            this.BT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +58,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(404, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Willkommen bei unserem Europaquiz, wie gut kennen sie Europa finden Sie es raus.";
+            this.textBox1.Text = "Willkommen bei unserem Europaquiz, wie gut kennen Sie Europa finden Sie es raus.";
             // 
             // SvgImage
             // 
@@ -75,6 +78,21 @@
             this.textBox2.Size = new System.Drawing.Size(69, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Timer: 00:00";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // ZT
+            // 
+            this.ZT.Interval = 1000;
+            // 
+            // BT
+            // 
+            this.BT.Location = new System.Drawing.Point(416, 39);
+            this.BT.Name = "BT";
+            this.BT.Size = new System.Drawing.Size(69, 23);
+            this.BT.TabIndex = 5;
+            this.BT.Text = "Button";
+            this.BT.UseVisualStyleBackColor = true;
+            this.BT.Click += new System.EventHandler(this.BT_Click);
             // 
             // Form1
             // 
@@ -82,6 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(697, 480);
+            this.Controls.Add(this.BT);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.SvgImage);
             this.Controls.Add(this.textBox1);
@@ -103,6 +122,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox SvgImage;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Timer ZT;
+        private System.Windows.Forms.Button BT;
     }
 }
 

@@ -48,9 +48,15 @@ namespace Projekt_Europaquiz
             
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            BT.PerformClick();
+        }
 
-
-       
+        private void BT_Click(object sender, EventArgs e)
+        {
+            NextCountry();
+        }
     }
  }
 
