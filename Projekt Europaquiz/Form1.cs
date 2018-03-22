@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Svg;
+using System.IO;
 
 
 namespace Projekt_Europaquiz
@@ -43,19 +44,34 @@ namespace Projekt_Europaquiz
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
             selectedPath = "D:\\Europaquiz\\Europa.svg";
             svgDocument = SVGParser.GetSvgDocument(selectedPath);
-            SvgImage.Image =SVGParser.GetBitmapFromSVG(selectedPath);
-            
-            
+            SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
+
+
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Einfärben()
         {
-            
-        }
+            String dateiPfad = "D:\\Europaquiz\\Europa.svg";
 
-        private void BT_Click(object sender, EventArgs e)
-        {
-            
+            StreamReader inputStreamReader = File.OpenText(dateiPfad);
+            String Inhalt = inputStreamReader.ReadToEnd();
+            inputStreamReader.Close();
+
+            String ersetzen = "";
+            String durch = "";
+
+            Inhalt = Inhalt.Replace(ersetzen, durch);
+
+            StreamWriter outputStreamWriter = File.CreateText("D:\\Europaquiz\\Europa(gefärbt).svg");
+            outputStreamWriter.Write(Inhalt);
+            outputStreamWriter.Close();
+
+
+            SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
+            selectedPath = "D:\\Europaquiz\\Europa(gefärbt).svg";
+            svgDocument = SVGParser.GetSvgDocument(selectedPath);
+            SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
+
         }
 
         private void Optionen_Button_Click(object sender, EventArgs e)
@@ -63,6 +79,11 @@ namespace Projekt_Europaquiz
             Optionen option = new Optionen();
             option.Show();
             option.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Einfärben();
         }
     }
 }

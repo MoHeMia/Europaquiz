@@ -35,6 +35,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.ZT = new System.Windows.Forms.Timer(this.components);
             this.Optionen_Button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,6 @@
             this.textBox2.Size = new System.Drawing.Size(69, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Timer: 00:00";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // ZT
             // 
@@ -95,12 +95,23 @@
             this.Optionen_Button.UseVisualStyleBackColor = true;
             this.Optionen_Button.Click += new System.EventHandler(this.Optionen_Button_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(440, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(697, 480);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Optionen_Button);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.SvgImage);
@@ -125,6 +136,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Timer ZT;
         private System.Windows.Forms.Button Optionen_Button;
+        private System.Windows.Forms.Button button1;
     }
 }
 
