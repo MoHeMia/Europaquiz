@@ -53,17 +53,34 @@ namespace Projekt_Europaquiz
         {
             String dateiPfad = "D:\\Europaquiz\\Europa.svg";
 
-            StreamReader inputStreamReader = File.OpenText(dateiPfad);
-            String Inhalt = inputStreamReader.ReadToEnd();
-            inputStreamReader.Close();
+            StreamReader dateiLeser = File.OpenText(dateiPfad); // die Datei öffnen
+            string[] Datei = new string[40000]; // eine Liste für die Werte erstellen
+            int a = 0;
+            while (!dateiLeser.EndOfStream) // bis zum Ende der Datei ...
+            { 
+                string zeile = dateiLeser.ReadLine(); // ... die nächste Zeile lesen und in einen String schreiben und ...
+                Datei[a] = zeile;
+                a++;
+            }
+            
 
-            String ersetzen = "";
-            String durch = "";
+            dateiLeser.Close();
 
-            Inhalt = Inhalt.Replace(ersetzen, durch);
+            for (int i = 0; i < 85; i++)
+            {
+                if (Datei[i] == "--1--")
+                {
+                    Datei[i].Replace("fil1", "fil8");
+                }
+            }
+
+            
 
             StreamWriter outputStreamWriter = File.CreateText("D:\\Europaquiz\\Europa(gefärbt).svg");
-            outputStreamWriter.Write(Inhalt);
+            for (int i = 0; i < 123; i++)
+            {
+                outputStreamWriter.WriteLine(Datei[i]);
+            }
             outputStreamWriter.Close();
 
 
