@@ -54,7 +54,7 @@ namespace Projekt_Europaquiz
             String dateiPfad = "D:\\Europaquiz\\Europa.svg";
 
             StreamReader dateiLeser = File.OpenText(dateiPfad); // die Datei öffnen
-            string[] Datei = new string[40000]; // eine Liste für die Werte erstellen
+            string[] Datei = new string[150]; // eine Array für die Zeilen erstellen
             int a = 0;
             while (!dateiLeser.EndOfStream) // bis zum Ende der Datei ...
             { 
