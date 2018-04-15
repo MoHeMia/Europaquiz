@@ -49,6 +49,14 @@ namespace Projekt_Europaquiz
 
         }
 
+
+
+
+       
+
+
+
+
         private void Einfärben()
         {
             String dateiPfad = "D:\\Europaquiz\\Europa.svg";
@@ -65,10 +73,12 @@ namespace Projekt_Europaquiz
             
 
             dateiLeser.Close();
+            
 
             for (int i = 0; i < 85; i++)
             {
-                if (Datei[i] == "--1--")
+                bool enthält = Datei[i].Contains("--1--");
+                if (enthält == true)
                 {
                     Datei[i].Replace("fil1", "fil8");
                 }
