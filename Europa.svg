@@ -17,6 +17,9 @@
     .fil3 {fill:black;fill-rule:nonzero}
     .fil2 {fill:white;fill-rule:nonzero;fill-opacity:0.501961}
 	.fil8 {fill:red;}
+	.fil9 {fill:lightgreen;}
+	.fil10 {fill:darkgreen;}
+	.fil11 {fill:yellow;}
    ]]>
   </style>
  </defs>

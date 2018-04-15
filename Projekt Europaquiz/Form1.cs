@@ -80,14 +80,14 @@ namespace Projekt_Europaquiz
                 bool enthält = Datei[i].Contains("--1--");
                 if (enthält == true)
                 {
-                    Datei[i].Replace("fil1", "fil8");
+                   Datei[i]= Datei[i].Replace("fil1", "fil11");
                 }
             }
 
             
 
             StreamWriter outputStreamWriter = File.CreateText("D:\\Europaquiz\\Europa(gefärbt).svg");
-            for (int i = 0; i < 123; i++)
+            for (int i = 0; i < 150; i++)
             {
                 outputStreamWriter.WriteLine(Datei[i]);
             }
