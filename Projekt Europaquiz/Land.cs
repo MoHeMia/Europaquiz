@@ -11,8 +11,10 @@ namespace Projekt_Europaquiz
         private int Nummer;
         private string Name;
         private string Haupstadt;
+        private int punkteHaupstadt;
+        private int punkteLand;
+        private int punkteBeides;
         private int Zoomfaktor;//[PH]
-        private int[,] Position = new int[1,1];
         private bool benutzt = false;
 
 
@@ -39,6 +41,30 @@ namespace Projekt_Europaquiz
         public void setHaupstadt(string Haupstadt)
         {
             this.Haupstadt = Haupstadt;
+        }
+        public int getpunkteHaupstadt()
+        {
+            return punkteHaupstadt;
+        }
+        public void setpunkteHaupstadt(int punkteHaupstadt)
+        {
+            this.punkteHaupstadt = punkteHaupstadt;
+        }
+        public int getpunkteLand()
+        {
+            return punkteLand;
+        }
+        public void setpunkteLand(int punkteLand)
+        {
+            this.punkteLand = punkteLand;
+        }
+        public int getpunkteBeides()
+        {
+            return punkteBeides;
+        }
+        public void setpunkteBeides(int punkteBeides)
+        {
+            this.punkteBeides = punkteBeides;
         }
         public bool getbenutzt()
         {

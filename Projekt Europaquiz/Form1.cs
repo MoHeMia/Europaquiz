@@ -47,6 +47,22 @@ namespace Projekt_Europaquiz
             SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
 
 
+
+
+            string pfad = "D:\\Europaquiz\\LänderPunkte.txt";
+            // Textdatei öffnen, Umlaute richtig lesen
+            StreamReader DateiLesen = new StreamReader(pfad, Encoding.Default);
+            // Solange Dateiende nicht erreicht
+            while (!DateiLesen.EndOfStream)
+            {
+                //eine Zeile aus der Textdatei lesen
+                string zeile = DateiLesen.ReadLine();
+                string[] daten = zeile.Split(';');
+                                                
+
+            }
+            // Datei schließen
+            DateiLesen.Close();
         }
 
 
