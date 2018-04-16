@@ -26,7 +26,7 @@ namespace Projekt_Europaquiz
         /// </summary>
         private Svg.SvgDocument svgDocument;
 
-        private Land[] Länder = new Land[47];
+        private Land[] Länder = new Land[48];
 
         public Form1()
         {
@@ -55,16 +55,13 @@ namespace Projekt_Europaquiz
             // Solange Dateiende nicht erreicht
             while (!DateiLesen.EndOfStream)
             {
+                
                 //eine Zeile aus der Textdatei lesen
                 string zeile = DateiLesen.ReadLine();
                 string[] daten = zeile.Split(';');
-                Länder[i].setNummer(Convert.ToInt32(daten[0]));
-                Länder[i].setName(daten[1]);
-                Länder[i].setpunkteLand(Convert.ToInt32(daten[2]));
-                Länder[i].setHaupstadt(daten[3]);
-                Länder[i].setpunkteHaupstadt(Convert.ToInt32(daten[4]));
-                Länder[i].setpunkteBeides(Convert.ToInt32(daten[5]));
+                
                 i++;
+            
             }
             // Datei schließen
             DateiLesen.Close();
