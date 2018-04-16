@@ -75,3 +75,13 @@ C:\Users\Max\Desktop\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.
 C:\Users\Max\Desktop\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Optionen.resources
 C:\Users\Max\Desktop\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Properties.Resources.resources
 C:\Users\Max\Desktop\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csproj.GenerateResource.Cache
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.exe
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\bin\Debug\Projekt Europaquiz.pdb
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\bin\Debug\Svg.dll
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\bin\Debug\Svg.pdb
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\bin\Debug\Svg.xml
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csprojResolveAssemblyReference.cache
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Form1.resources
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Optionen.resources
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Properties.Resources.resources
+C:\Users\schule\Source\Repos\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csproj.GenerateResource.Cache
