@@ -26,7 +26,7 @@ namespace Projekt_Europaquiz
         /// </summary>
         private Svg.SvgDocument svgDocument;
 
-
+        private Land[] Länder = new Land[47];
 
         public Form1()
         {
@@ -48,7 +48,7 @@ namespace Projekt_Europaquiz
 
 
 
-
+            int i = 0;
             string pfad = Application.StartupPath + @"/LänderPunkte.txt";
             // Textdatei öffnen, Umlaute richtig lesen
             StreamReader DateiLesen = new StreamReader(pfad, Encoding.Default);
@@ -58,8 +58,13 @@ namespace Projekt_Europaquiz
                 //eine Zeile aus der Textdatei lesen
                 string zeile = DateiLesen.ReadLine();
                 string[] daten = zeile.Split(';');
-                                                
-
+                Länder[i].setNummer(Convert.ToInt32(daten[0]));
+                Länder[i].setName(daten[1]);
+                Länder[i].setpunkteLand(Convert.ToInt32(daten[2]));
+                Länder[i].setHaupstadt(daten[3]);
+                Länder[i].setpunkteHaupstadt(Convert.ToInt32(daten[4]));
+                Länder[i].setpunkteBeides(Convert.ToInt32(daten[5]));
+                i++;
             }
             // Datei schließen
             DateiLesen.Close();
