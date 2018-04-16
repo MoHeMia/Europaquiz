@@ -42,14 +42,14 @@ namespace Projekt_Europaquiz
             SvgImage.Height = 850;
 
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
-            selectedPath = "D:\\Europaquiz\\Europa.svg";
+            selectedPath =  Application.StartupPath+@"/Europa.svg";
             svgDocument = SVGParser.GetSvgDocument(selectedPath);
             SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
 
 
 
 
-            string pfad = "D:\\Europaquiz\\LänderPunkte.txt";
+            string pfad = Application.StartupPath + @"/LänderPunkte.txt";
             // Textdatei öffnen, Umlaute richtig lesen
             StreamReader DateiLesen = new StreamReader(pfad, Encoding.Default);
             // Solange Dateiende nicht erreicht
@@ -73,9 +73,9 @@ namespace Projekt_Europaquiz
 
 
 
-        private void Einfärben()
+        private void Einfärben(int farbeAlt,int farbeNeu,int LandID)
         {
-            String dateiPfad = "D:\\Europaquiz\\Europa.svg";
+            String dateiPfad = Application.StartupPath + "/Europa.svg";
 
             StreamReader dateiLeser = File.OpenText(dateiPfad); // die Datei öffnen
             string[] Datei = new string[150]; // eine Array für die Zeilen erstellen
@@ -93,16 +93,16 @@ namespace Projekt_Europaquiz
 
             for (int i = 0; i < 85; i++)
             {
-                bool enthält = Datei[i].Contains("--1--");
+                bool enthält = Datei[i].Contains($"--{LandID}--");
                 if (enthält == true)
                 {
-                   Datei[i]= Datei[i].Replace("fil1", "fil11");
+                   Datei[i]= Datei[i].Replace($"fil{farbeAlt}", $"fil{farbeNeu}");
                 }
             }
 
             
 
-            StreamWriter outputStreamWriter = File.CreateText("D:\\Europaquiz\\Europa(gefärbt).svg");
+            StreamWriter outputStreamWriter = File.CreateText(Application.StartupPath + @"/Europa(gefärbt).svg");
             for (int i = 0; i < 150; i++)
             {
                 outputStreamWriter.WriteLine(Datei[i]);
@@ -111,7 +111,7 @@ namespace Projekt_Europaquiz
 
 
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
-            selectedPath = "D:\\Europaquiz\\Europa(gefärbt).svg";
+            selectedPath = Application.StartupPath + @"/Europa(gefärbt).svg";
             svgDocument = SVGParser.GetSvgDocument(selectedPath);
             SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
 
@@ -126,7 +126,7 @@ namespace Projekt_Europaquiz
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Einfärben();
+            Einfärben(1,8,1);
         }
     }
 }
