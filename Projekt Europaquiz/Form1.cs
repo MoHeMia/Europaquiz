@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Svg;
 using System.IO;
-
+using System.Speech.Recognition;
 
 namespace Projekt_Europaquiz
 {
@@ -65,7 +65,39 @@ namespace Projekt_Europaquiz
             }
             // Datei schließen
             DateiLesen.Close();
+
+
+
+            //Sprachsteuerung
+            SpeechRecognitionEngine Recogn = new SpeechRecognitionEngine();
+            Recogn.SetInputToDefaultAudioDevice();
+            Recogn.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_Speechrecognized);
+            Recogn.SpeechRecognitionRejected += new EventHandler<SpeechRecognitionRejectedEventArgs>(recognizer_Speechnotrecognized);
+
+            try
+            {
+                Grammar Grammatik = new Grammar("grammar.xml", "LänderuStädte");
+                Recogn.UnloadAllGrammars();
+                Recogn.LoadGrammar(Grammatik);
+
+                Recogn.RecognizeAsync(RecognizeMode.Multiple);
+            }
+            catch
+            {
+                MessageBox.Show("Feeeeeeeehleeeeeeeer");
+            }
         }
+
+        private void recognizer_Speechnotrecognized(object sender, SpeechRecognitionRejectedEventArgs e)
+        {
+            MessageBox.Show("fEhLEr");
+        }
+
+        private void recognizer_Speechrecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            MessageBox.Show(e.Result.Text);
+        }
+    }
 
 
 
@@ -130,6 +162,11 @@ namespace Projekt_Europaquiz
         {
             Einfärben(1,8,1);
         }
+
+
+
+
+        
     }
 }
 
