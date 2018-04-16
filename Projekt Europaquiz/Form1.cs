@@ -84,20 +84,20 @@ namespace Projekt_Europaquiz
             }
             catch
             {
-                MessageBox.Show("Feeeeeeeehleeeeeeeer");
+                MessageBox.Show("Fehler!");
             }
         }
 
         private void recognizer_Speechnotrecognized(object sender, SpeechRecognitionRejectedEventArgs e)
         {
-            MessageBox.Show("fEhLEr");
+            MessageBox.Show("Fehler!");
         }
 
         private void recognizer_Speechrecognized(object sender, SpeechRecognizedEventArgs e)
         {
             MessageBox.Show(e.Result.Text);
         }
-    }
+    
 
 
 
@@ -160,7 +160,7 @@ namespace Projekt_Europaquiz
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Einfärben(1,8,1);
+            Einfärben(45,8,1);
         }
 
 
