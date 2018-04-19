@@ -8,7 +8,7 @@ namespace Projekt_Europaquiz
 {
     class Land
     {
-        private int Nummer;
+        private int Nummer = 0;
         private string Name;
         private string Haupstadt;
         private int punkteHaupstadt;
