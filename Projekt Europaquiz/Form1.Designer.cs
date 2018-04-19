@@ -37,6 +37,7 @@
             this.ZT = new System.Windows.Forms.Timer(this.components);
             this.Optionen_Button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.StartKnopf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +109,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // StartKnopf
+            // 
+            this.StartKnopf.Location = new System.Drawing.Point(12, 38);
+            this.StartKnopf.Name = "StartKnopf";
+            this.StartKnopf.Size = new System.Drawing.Size(103, 40);
+            this.StartKnopf.TabIndex = 7;
+            this.StartKnopf.Text = "Start";
+            this.StartKnopf.UseVisualStyleBackColor = true;
+            this.StartKnopf.Click += new System.EventHandler(this.StartKnopf_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +126,7 @@
             this.BackColor = System.Drawing.Color.Peru;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(697, 480);
+            this.Controls.Add(this.StartKnopf);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Optionen_Button);
             this.Controls.Add(this.textBox2);
@@ -141,6 +153,7 @@
         private System.Windows.Forms.Timer ZT;
         private System.Windows.Forms.Button Optionen_Button;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button StartKnopf;
     }
 }
 

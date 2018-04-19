@@ -27,7 +27,7 @@ namespace Projekt_Europaquiz
         private Svg.SvgDocument svgDocument;
 
         private Land[] Länder = new Land[48];
-        
+        private Random rnd = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -116,7 +116,7 @@ namespace Projekt_Europaquiz
 
         private void Einfärben(int farbeAlt,int farbeNeu,int LandID)
         {
-            String dateiPfad = Application.StartupPath + "/Europa.svg";
+            String dateiPfad = Application.StartupPath + "/Europa(gefärbt).svg";
 
             StreamReader dateiLeser = File.OpenText(dateiPfad); // die Datei öffnen
             string[] Datei = new string[150]; // eine Array für die Zeilen erstellen
@@ -167,13 +167,56 @@ namespace Projekt_Europaquiz
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Einfärben(1,11,Länder[0].getNummer());
+            resetFarbe();
+
+
         }
 
 
+        public void resetFarbe()
+        {
+            String dateiPfad = Application.StartupPath + "/Europa.svg";
+
+            StreamReader dateiLeser = File.OpenText(dateiPfad); // die Datei öffnen
+            string[] Datei = new string[150]; // eine Array für die Zeilen erstellen
+            int a = 0;
+            while (!dateiLeser.EndOfStream) // bis zum Ende der Datei ...
+            {
+                string zeile = dateiLeser.ReadLine(); // ... die nächste Zeile lesen und in einen String schreiben und ...
+                Datei[a] = zeile;
+                a++;
+            }
 
 
-        
+            dateiLeser.Close();
+
+            StreamWriter outputStreamWriter = File.CreateText(Application.StartupPath + @"/Europa(gefärbt).svg");
+            for (int i = 0; i < 150; i++)
+            {
+                outputStreamWriter.WriteLine(Datei[i]);
+            }
+            outputStreamWriter.Close();
+
+
+            SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
+            selectedPath = Application.StartupPath + @"/Europa(gefärbt).svg";
+            svgDocument = SVGParser.GetSvgDocument(selectedPath);
+            SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
+        }
+
+        private void StartKnopf_Click(object sender, EventArgs e)
+        {
+            resetFarbe();
+            for (int i = 0; i < 48; i++)
+            {
+                int aktuellesLand = rnd.Next(0, 47);
+                while (Länder[aktuellesLand].getbenutzt() == true)
+                {
+                    aktuellesLand = rnd.Next(0, 47);
+                }
+                Einfärben(1, 11, Länder[aktuellesLand].getNummer());
+            }
+        }
     }
 }
 
