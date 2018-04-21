@@ -41,8 +41,24 @@
             this.LandHaupstadtBox = new System.Windows.Forms.Label();
             this.GrußNachricht = new System.Windows.Forms.Label();
             this.Punktlabel = new System.Windows.Forms.Label();
+            this.PictureFäröer = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PictureSanMarino = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.PictureVatikanstaat = new System.Windows.Forms.PictureBox();
+            this.PictureAndorra = new System.Windows.Forms.PictureBox();
+            this.PictureLichtenstein = new System.Windows.Forms.PictureBox();
+            this.PictureMonaco = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureFäröer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureSanMarino)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureVatikanstaat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAndorra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureLichtenstein)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMonaco)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,7 +78,7 @@
             this.SvgImage.BackColor = System.Drawing.Color.White;
             this.SvgImage.Location = new System.Drawing.Point(12, 149);
             this.SvgImage.Name = "SvgImage";
-            this.SvgImage.Size = new System.Drawing.Size(366, 301);
+            this.SvgImage.Size = new System.Drawing.Size(1200, 850);
             this.SvgImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.SvgImage.TabIndex = 3;
             this.SvgImage.TabStop = false;
@@ -156,13 +172,109 @@
             this.Punktlabel.TabIndex = 13;
             this.Punktlabel.Text = "Punkte:0";
             // 
+            // PictureFäröer
+            // 
+            this.PictureFäröer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureFäröer.Image = ((System.Drawing.Image)(resources.GetObject("PictureFäröer.Image")));
+            this.PictureFäröer.Location = new System.Drawing.Point(199, 279);
+            this.PictureFäröer.Name = "PictureFäröer";
+            this.PictureFäröer.Size = new System.Drawing.Size(93, 87);
+            this.PictureFäröer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureFäröer.TabIndex = 14;
+            this.PictureFäröer.TabStop = false;
+            this.PictureFäröer.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // PictureSanMarino
+            // 
+            this.PictureSanMarino.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureSanMarino.Image = ((System.Drawing.Image)(resources.GetObject("PictureSanMarino.Image")));
+            this.PictureSanMarino.Location = new System.Drawing.Point(359, 629);
+            this.PictureSanMarino.Name = "PictureSanMarino";
+            this.PictureSanMarino.Size = new System.Drawing.Size(97, 91);
+            this.PictureSanMarino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureSanMarino.TabIndex = 16;
+            this.PictureSanMarino.TabStop = false;
+            this.PictureSanMarino.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // PictureVatikanstaat
+            // 
+            this.PictureVatikanstaat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureVatikanstaat.Image = ((System.Drawing.Image)(resources.GetObject("PictureVatikanstaat.Image")));
+            this.PictureVatikanstaat.Location = new System.Drawing.Point(304, 673);
+            this.PictureVatikanstaat.Name = "PictureVatikanstaat";
+            this.PictureVatikanstaat.Size = new System.Drawing.Size(103, 99);
+            this.PictureVatikanstaat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureVatikanstaat.TabIndex = 18;
+            this.PictureVatikanstaat.TabStop = false;
+            this.PictureVatikanstaat.Visible = false;
+            // 
+            // PictureAndorra
+            // 
+            this.PictureAndorra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureAndorra.Image = ((System.Drawing.Image)(resources.GetObject("PictureAndorra.Image")));
+            this.PictureAndorra.Location = new System.Drawing.Point(177, 661);
+            this.PictureAndorra.Name = "PictureAndorra";
+            this.PictureAndorra.Size = new System.Drawing.Size(90, 98);
+            this.PictureAndorra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureAndorra.TabIndex = 19;
+            this.PictureAndorra.TabStop = false;
+            this.PictureAndorra.Visible = false;
+            // 
+            // PictureLichtenstein
+            // 
+            this.PictureLichtenstein.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureLichtenstein.Image = ((System.Drawing.Image)(resources.GetObject("PictureLichtenstein.Image")));
+            this.PictureLichtenstein.Location = new System.Drawing.Point(332, 600);
+            this.PictureLichtenstein.Name = "PictureLichtenstein";
+            this.PictureLichtenstein.Size = new System.Drawing.Size(81, 93);
+            this.PictureLichtenstein.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureLichtenstein.TabIndex = 20;
+            this.PictureLichtenstein.TabStop = false;
+            this.PictureLichtenstein.Visible = false;
+            // 
+            // PictureMonaco
+            // 
+            this.PictureMonaco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureMonaco.Image = ((System.Drawing.Image)(resources.GetObject("PictureMonaco.Image")));
+            this.PictureMonaco.Location = new System.Drawing.Point(238, 639);
+            this.PictureMonaco.Name = "PictureMonaco";
+            this.PictureMonaco.Size = new System.Drawing.Size(98, 102);
+            this.PictureMonaco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureMonaco.TabIndex = 21;
+            this.PictureMonaco.TabStop = false;
+            this.PictureMonaco.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1818, 920);
+            this.ClientSize = new System.Drawing.Size(1845, 1020);
+            this.Controls.Add(this.PictureMonaco);
+            this.Controls.Add(this.PictureLichtenstein);
+            this.Controls.Add(this.PictureAndorra);
+            this.Controls.Add(this.PictureVatikanstaat);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.PictureSanMarino);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.PictureFäröer);
             this.Controls.Add(this.Punktlabel);
             this.Controls.Add(this.GrußNachricht);
             this.Controls.Add(this.LandHaupstadtBox);
@@ -179,6 +291,14 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureFäröer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureSanMarino)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureVatikanstaat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAndorra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureLichtenstein)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMonaco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,6 +317,14 @@
         private System.Windows.Forms.Label LandHaupstadtBox;
         private System.Windows.Forms.Label GrußNachricht;
         private System.Windows.Forms.Label Punktlabel;
+        private System.Windows.Forms.PictureBox PictureFäröer;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox PictureSanMarino;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox PictureVatikanstaat;
+        private System.Windows.Forms.PictureBox PictureAndorra;
+        private System.Windows.Forms.PictureBox PictureLichtenstein;
+        private System.Windows.Forms.PictureBox PictureMonaco;
     }
 }
 

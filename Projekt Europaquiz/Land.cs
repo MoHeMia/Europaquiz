@@ -14,7 +14,6 @@ namespace Projekt_Europaquiz
         private int punkteHaupstadt;
         private int punkteLand;
         private int punkteBeides;
-        private int Zoomfaktor;//[PH]
         private bool benutzt = false;
 
 

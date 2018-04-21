@@ -50,7 +50,7 @@ namespace Projekt_Europaquiz
             Bestätigen.Visible = false;
             Lösungsbox.Visible = false;
             LandHaupstadtBox.Visible = false;
-                        Zeit = Opt.getZeit();
+            Zeit = Opt.getZeit();
             AnzahlLänder = Opt.getAnzahl();
 
             this.FormBorderStyle = FormBorderStyle.None;
@@ -226,7 +226,7 @@ namespace Projekt_Europaquiz
             LandHaupstadtBox.Visible = true;
             StartKnopf.Text = "Restart";
             wähleLand();
-
+            
             ZT.Start();
 
 
@@ -264,6 +264,13 @@ namespace Projekt_Europaquiz
                         Punkte = Punkte + Länder[aktuellesLand].getpunkteLand();
                         Punktlabel.Text = $"Punkte:{Punkte}";
 
+                        PictureFäröer.Visible = false;
+                        PictureAndorra.Visible = false;
+                        PictureLichtenstein.Visible = false;
+                        PictureMonaco.Visible = false;
+                        PictureSanMarino.Visible = false;
+                        PictureVatikanstaat.Visible = false;
+
                         Zeit = Opt.getZeit();
                         ZT.Start();
                     }
@@ -271,12 +278,24 @@ namespace Projekt_Europaquiz
                     {
                         Einfärben(11, 8, Länder[aktuellesLand].getNummer());
                         Lösungsbox.Text = "";
+
+                        PictureFäröer.Visible = false;
+                        PictureAndorra.Visible = false;
+                        PictureLichtenstein.Visible = false;
+                        PictureMonaco.Visible = false;
+                        PictureSanMarino.Visible = false;
+                        PictureVatikanstaat.Visible = false;
+
                         if (AnzahlLänder > 0)
                         {
                             wähleLand();
                             AnzahlLänder--;
                             Zeit = Opt.getZeit();
                             ZT.Start();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ende!");
                         }
                     }
                 }
@@ -298,6 +317,10 @@ namespace Projekt_Europaquiz
                             Zeit = Opt.getZeit();
                             ZT.Start();
                         }
+                        else
+                        {
+                            MessageBox.Show("Ende!");
+                        }
                     }
                     else
                     {
@@ -310,6 +333,10 @@ namespace Projekt_Europaquiz
                             AnzahlLänder--;
                             Zeit = Opt.getZeit();
                             ZT.Start();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ende!");
                         }
                     }
                 }
@@ -329,6 +356,30 @@ namespace Projekt_Europaquiz
             }
             Einfärben(1, 11, Länder[aktuellesLand].getNummer());
             Länder[aktuellesLand].setbenutzt(true);
+            if(Länder[aktuellesLand].getName()=="Färöer")
+            {
+                PictureFäröer.Visible = true;
+            }
+            if (Länder[aktuellesLand].getName() == "Monaco")
+            {
+                PictureMonaco.Visible = true;
+            }
+            if (Länder[aktuellesLand].getName() == "Andorra")
+            {
+                PictureAndorra.Visible = true;
+            }
+            if (Länder[aktuellesLand].getName() == "Liechtenstein")
+            {
+                PictureLichtenstein.Visible = true;
+            }
+            if (Länder[aktuellesLand].getName() == "Vatikanstaat")
+            {
+                PictureVatikanstaat.Visible = true;
+            }
+            if (Länder[aktuellesLand].getName() == "San Marino")
+            {
+                PictureSanMarino.Visible = true;
+            }
         }
     }
 }
