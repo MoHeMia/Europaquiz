@@ -28,6 +28,18 @@ namespace Projekt_Europaquiz
 
         private Land[] Länder = new Land[48];
         private Random rnd = new Random();
+        private int aktuellesLand;
+        private Optionen Opt = new Optionen();
+
+        private bool Landerraten = false;
+
+        private int Zeit;
+
+        private int Punkte = 0;
+
+        private int AnzahlLänder;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +47,12 @@ namespace Projekt_Europaquiz
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Bestätigen.Visible = false;
+            Lösungsbox.Visible = false;
+            LandHaupstadtBox.Visible = false;
+                        Zeit = Opt.getZeit();
+            AnzahlLänder = Opt.getAnzahl();
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
@@ -42,7 +60,7 @@ namespace Projekt_Europaquiz
             SvgImage.Height = 850;
 
             SVGParser.MaximumSize = new Size(SvgImage.Width, SvgImage.Height);
-            selectedPath =  Application.StartupPath+@"/Europa.svg";
+            selectedPath = Application.StartupPath + @"/Europa.svg";
             svgDocument = SVGParser.GetSvgDocument(selectedPath);
             SvgImage.Image = SVGParser.GetBitmapFromSVG(selectedPath);
 
@@ -55,7 +73,7 @@ namespace Projekt_Europaquiz
             // Solange Dateiende nicht erreicht
             while (!DateiLesen.EndOfStream)
             {
-                
+
                 //eine Zeile aus der Textdatei lesen
                 string zeile = DateiLesen.ReadLine();
                 string[] daten = zeile.Split(';');
@@ -65,10 +83,10 @@ namespace Projekt_Europaquiz
                 Länder[i].setName(daten[1]);
                 Länder[i].setpunkteLand(Convert.ToInt32(daten[2]));
                 Länder[i].setHaupstadt(daten[3]);
-                Länder[i].setpunkteHaupstadt(Convert.ToInt32(daten[4]));
+                Länder[i].setpunkteHauptstadt(Convert.ToInt32(daten[4]));
                 Länder[i].setpunkteBeides(Convert.ToInt32(daten[5]));
                 i++;
-            
+
             }
             // Datei schließen
             DateiLesen.Close();
@@ -104,17 +122,17 @@ namespace Projekt_Europaquiz
         {
             MessageBox.Show(e.Result.Text);
         }
-    
 
 
 
 
-       
 
 
 
 
-        private void Einfärben(int farbeAlt,int farbeNeu,int LandID)
+
+
+        private void Einfärben(int farbeAlt, int farbeNeu, int LandID)
         {
             String dateiPfad = Application.StartupPath + "/Europa(gefärbt).svg";
 
@@ -122,26 +140,26 @@ namespace Projekt_Europaquiz
             string[] Datei = new string[150]; // eine Array für die Zeilen erstellen
             int a = 0;
             while (!dateiLeser.EndOfStream) // bis zum Ende der Datei ...
-            { 
+            {
                 string zeile = dateiLeser.ReadLine(); // ... die nächste Zeile lesen und in einen String schreiben und ...
                 Datei[a] = zeile;
                 a++;
             }
-            
+
 
             dateiLeser.Close();
-            
+
 
             for (int i = 0; i < 85; i++)
             {
                 bool enthält = Datei[i].Contains($"--{LandID}--");
                 if (enthält == true)
                 {
-                   Datei[i]= Datei[i].Replace($"fil{farbeAlt}", $"fil{farbeNeu}");
+                    Datei[i] = Datei[i].Replace($"fil{farbeAlt}", $"fil{farbeNeu}");
                 }
             }
 
-            
+
 
             StreamWriter outputStreamWriter = File.CreateText(Application.StartupPath + @"/Europa(gefärbt).svg");
             for (int i = 0; i < 150; i++)
@@ -163,13 +181,6 @@ namespace Projekt_Europaquiz
             Optionen option = new Optionen();
             option.Show();
             option.Focus();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            resetFarbe();
-
-
         }
 
 
@@ -206,16 +217,118 @@ namespace Projekt_Europaquiz
 
         private void StartKnopf_Click(object sender, EventArgs e)
         {
+            Zeit = Opt.getZeit();
+            AnzahlLänder = Opt.getAnzahl();
             resetFarbe();
-            for (int i = 0; i < 48; i++)
+            Punkte = 0;
+            Bestätigen.Visible = true;
+            Lösungsbox.Visible = true;
+            LandHaupstadtBox.Visible = true;
+            StartKnopf.Text = "Restart";
+            wähleLand();
+
+            ZT.Start();
+
+
+
+        }
+
+        private void ZT_Tick(object sender, EventArgs e)
+        {
+            if (Zeit > 0)
             {
-                int aktuellesLand = rnd.Next(0, 47);
-                while (Länder[aktuellesLand].getbenutzt() == true)
-                {
-                    aktuellesLand = rnd.Next(0, 47);
-                }
-                Einfärben(1, 11, Länder[aktuellesLand].getNummer());
+                Zeit--;
+                Zeitanzeige.Text = $"Timer:{Zeit}";
             }
+        }
+
+        private void Bestätigen_Click(object sender, EventArgs e)
+        {
+
+            ZT.Stop();
+            if (Zeit == 0)
+            {
+                Einfärben(11, 8, Länder[aktuellesLand].getNummer());
+                MessageBox.Show("Sie haben zulange gebraucht");
+            }
+            else
+            {
+                if (Landerraten == false)
+                {
+                    if (Länder[aktuellesLand].getName() == Lösungsbox.Text)
+                    {
+                        Einfärben(11, 9, Länder[aktuellesLand].getNummer());
+                        Landerraten = true;
+                        LandHaupstadtBox.Text = "Hauptstadt:";
+                        Lösungsbox.Text = "";
+                        Punkte = Punkte + Länder[aktuellesLand].getpunkteLand();
+                        Punktlabel.Text = $"Punkte:{Punkte}";
+
+                        Zeit = Opt.getZeit();
+                        ZT.Start();
+                    }
+                    else
+                    {
+                        Einfärben(11, 8, Länder[aktuellesLand].getNummer());
+                        Lösungsbox.Text = "";
+                        if (AnzahlLänder > 0)
+                        {
+                            wähleLand();
+                            AnzahlLänder--;
+                            Zeit = Opt.getZeit();
+                            ZT.Start();
+                        }
+                    }
+                }
+                else
+                {
+                    if (Länder[aktuellesLand].getHaupstadt() == Lösungsbox.Text)
+                    {
+                        Einfärben(9, 10, Länder[aktuellesLand].getNummer());
+                        Lösungsbox.Text = "";
+                        LandHaupstadtBox.Text = "Land:";
+                        Landerraten = false;
+                        Punkte = Punkte + Länder[aktuellesLand].getpunkteHauptstadt();
+                        Punkte = Punkte + Länder[aktuellesLand].getpunkteBeides();
+                        Punktlabel.Text = $"Punkte:{Punkte}";
+                        if (AnzahlLänder > 0)
+                        {
+                            wähleLand();
+                            AnzahlLänder--;
+                            Zeit = Opt.getZeit();
+                            ZT.Start();
+                        }
+                    }
+                    else
+                    {
+                        Lösungsbox.Text = "";
+                        LandHaupstadtBox.Text = "Land:";
+                        Landerraten = false;
+                        if (AnzahlLänder > 0)
+                        {
+                            wähleLand();
+                            AnzahlLänder--;
+                            Zeit = Opt.getZeit();
+                            ZT.Start();
+                        }
+                    }
+                }
+            }
+
+
+            Zeit = Opt.getZeit();
+        }
+
+
+        private void wähleLand()
+        {
+            aktuellesLand = rnd.Next(0, 47);
+            while (Länder[aktuellesLand].getbenutzt() == true)
+            {
+                aktuellesLand = rnd.Next(0, 47);
+            }
+            Einfärben(1, 11, Länder[aktuellesLand].getNummer());
+            Länder[aktuellesLand].setbenutzt(true);
         }
     }
 }

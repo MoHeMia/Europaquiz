@@ -42,11 +42,11 @@ namespace Projekt_Europaquiz
         {
             this.Haupstadt = Haupstadt;
         }
-        public int getpunkteHaupstadt()
+        public int getpunkteHauptstadt()
         {
             return punkteHaupstadt;
         }
-        public void setpunkteHaupstadt(int punkteHaupstadt)
+        public void setpunkteHauptstadt(int punkteHaupstadt)
         {
             this.punkteHaupstadt = punkteHaupstadt;
         }
