@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Projekt_Europaquiz
 {
@@ -16,26 +19,9 @@ namespace Projekt_Europaquiz
         {
             InitializeComponent();
         }
-        private int Zeit = 30;
-        private int Anzahl = 10;
+        public static int Zeit = 30;
+        public static int Anzahl = 10;
 
-
-        public int getZeit()
-        {
-            return Zeit;
-        }
-        public void setZeit(int Zeit)
-        {
-            this.Zeit = Zeit;
-        }
-        public int getAnzahl()
-        {
-            return Anzahl;
-        }
-        public void setAnzahl(int Anzahl)
-        {
-            this.Anzahl = Anzahl;
-        }
 
         private void Knopf_Click(object sender, EventArgs e)
         {
@@ -67,9 +53,33 @@ namespace Projekt_Europaquiz
             
         }
 
-        private void Regeln_Click(object sender, EventArgs e)
+    
+
+        private void regelknopf_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bitte gültige Werte eintagen");
+            MessageBox.Show("1.Land und Hauptstadt sind zu erraten." + Environment.NewLine + "2.Sie können entweder gesprochen oder eingetragen werden." + Environment.NewLine + "3.Die Eingabe muss mit [Bestätigen]im Zeitrahmen eingeloggt werden." + Environment.NewLine + "Es gibt Punkte für richtige Antworten." + Environment.NewLine + "Die Haupstadt kann nur erraten werden falls das Land Korrekt war.");
+        }
+
+        private void Urkundeknopf_Click(object sender, EventArgs e)
+        {
+            string formFile = Application.StartupPath + @"/Urkunde Konzept.pdf";
+            string newFile = @"D:\\Urkunde.pdf";
+            PdfReader reader = new PdfReader(formFile);
+            PdfStamper stamper = new PdfStamper(reader, new FileStream(
+                newFile, FileMode.Create));
+            AcroFields fields = stamper.AcroFields;
+
+            // set form fields
+            fields.SetField("Name", Namebox.Text);
+            fields.SetField("Punkte", $"{Form1.Punkte}");
+            
+            
+
+            // flatten form fields and close document
+            stamper.FormFlattening = true;
+            stamper.Close();
+            
         }
     }
+    
 }

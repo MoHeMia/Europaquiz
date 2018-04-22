@@ -98,3 +98,5 @@ H:\Info\Projekt\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Form1
 H:\Info\Projekt\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Optionen.resources
 H:\Info\Projekt\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt_Europaquiz.Properties.Resources.resources
 H:\Info\Projekt\Europaquiz\Projekt Europaquiz\obj\Debug\Projekt Europaquiz.csproj.GenerateResource.Cache
+H:\Info\Projekt\Europaquiz\Projekt Europaquiz\bin\Debug\itextsharp.dll
+H:\Info\Projekt\Europaquiz\Projekt Europaquiz\bin\Debug\itextsharp.xml

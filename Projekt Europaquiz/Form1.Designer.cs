@@ -45,20 +45,22 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PictureSanMarino = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.PictureVatikanstaat = new System.Windows.Forms.PictureBox();
+            this.PictureVatikanstadt = new System.Windows.Forms.PictureBox();
             this.PictureAndorra = new System.Windows.Forms.PictureBox();
             this.PictureLichtenstein = new System.Windows.Forms.PictureBox();
             this.PictureMonaco = new System.Windows.Forms.PictureBox();
+            this.PictureMalta = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SvgImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFäröer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureSanMarino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureVatikanstaat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureVatikanstadt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAndorra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLichtenstein)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMonaco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMalta)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -212,17 +214,17 @@
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
             // 
-            // PictureVatikanstaat
+            // PictureVatikanstadt
             // 
-            this.PictureVatikanstaat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureVatikanstaat.Image = ((System.Drawing.Image)(resources.GetObject("PictureVatikanstaat.Image")));
-            this.PictureVatikanstaat.Location = new System.Drawing.Point(304, 673);
-            this.PictureVatikanstaat.Name = "PictureVatikanstaat";
-            this.PictureVatikanstaat.Size = new System.Drawing.Size(103, 99);
-            this.PictureVatikanstaat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureVatikanstaat.TabIndex = 18;
-            this.PictureVatikanstaat.TabStop = false;
-            this.PictureVatikanstaat.Visible = false;
+            this.PictureVatikanstadt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureVatikanstadt.Image = ((System.Drawing.Image)(resources.GetObject("PictureVatikanstadt.Image")));
+            this.PictureVatikanstadt.Location = new System.Drawing.Point(320, 699);
+            this.PictureVatikanstadt.Name = "PictureVatikanstadt";
+            this.PictureVatikanstadt.Size = new System.Drawing.Size(103, 99);
+            this.PictureVatikanstadt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureVatikanstadt.TabIndex = 18;
+            this.PictureVatikanstadt.TabStop = false;
+            this.PictureVatikanstadt.Visible = false;
             // 
             // PictureAndorra
             // 
@@ -260,6 +262,18 @@
             this.PictureMonaco.TabStop = false;
             this.PictureMonaco.Visible = false;
             // 
+            // PictureMalta
+            // 
+            this.PictureMalta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureMalta.Image = ((System.Drawing.Image)(resources.GetObject("PictureMalta.Image")));
+            this.PictureMalta.Location = new System.Drawing.Point(332, 836);
+            this.PictureMalta.Name = "PictureMalta";
+            this.PictureMalta.Size = new System.Drawing.Size(92, 95);
+            this.PictureMalta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureMalta.TabIndex = 22;
+            this.PictureMalta.TabStop = false;
+            this.PictureMalta.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,10 +281,11 @@
             this.BackColor = System.Drawing.Color.Peru;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1845, 1020);
+            this.Controls.Add(this.PictureMalta);
             this.Controls.Add(this.PictureMonaco);
             this.Controls.Add(this.PictureLichtenstein);
             this.Controls.Add(this.PictureAndorra);
-            this.Controls.Add(this.PictureVatikanstaat);
+            this.Controls.Add(this.PictureVatikanstadt);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.PictureSanMarino);
             this.Controls.Add(this.pictureBox3);
@@ -295,10 +310,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureSanMarino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureVatikanstaat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureVatikanstadt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAndorra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLichtenstein)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMonaco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMalta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,10 +337,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox PictureSanMarino;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox PictureVatikanstaat;
+        private System.Windows.Forms.PictureBox PictureVatikanstadt;
         private System.Windows.Forms.PictureBox PictureAndorra;
         private System.Windows.Forms.PictureBox PictureLichtenstein;
         private System.Windows.Forms.PictureBox PictureMonaco;
+        private System.Windows.Forms.PictureBox PictureMalta;
     }
 }
 

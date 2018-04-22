@@ -29,16 +29,16 @@ namespace Projekt_Europaquiz
         private Land[] Länder = new Land[48];
         private Random rnd = new Random();
         private int aktuellesLand;
-        private Optionen Opt = new Optionen();
 
         private bool Landerraten = false;
 
         private int Zeit;
 
-        private int Punkte = 0;
+        public static int Punkte = 0;
 
         private int AnzahlLänder;
 
+        private SpeechRecognitionEngine Recogn = new SpeechRecognitionEngine();
 
         public Form1()
         {
@@ -50,8 +50,8 @@ namespace Projekt_Europaquiz
             Bestätigen.Visible = false;
             Lösungsbox.Visible = false;
             LandHaupstadtBox.Visible = false;
-            Zeit = Opt.getZeit();
-            AnzahlLänder = Opt.getAnzahl();
+            Zeit = Optionen.Zeit;
+            AnzahlLänder = Optionen.Anzahl;
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -94,14 +94,14 @@ namespace Projekt_Europaquiz
 
 
             //Sprachsteuerung
-            SpeechRecognitionEngine Recogn = new SpeechRecognitionEngine();
+            
             Recogn.SetInputToDefaultAudioDevice();
             Recogn.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_Speechrecognized);
             Recogn.SpeechRecognitionRejected += new EventHandler<SpeechRecognitionRejectedEventArgs>(recognizer_Speechnotrecognized);
 
             try
             {
-                Grammar Grammatik = new Grammar("grammar.xml", "LänderuStädte");
+                Grammar Grammatik = new Grammar(Application.StartupPath + @"/grammar.xml", "LänderuStädte");
                 Recogn.UnloadAllGrammars();
                 Recogn.LoadGrammar(Grammatik);
 
@@ -111,16 +111,19 @@ namespace Projekt_Europaquiz
             {
                 MessageBox.Show("Feeeeeeehleeeeeer!");
             }
+
+            
         }
 
         private void recognizer_Speechnotrecognized(object sender, SpeechRecognitionRejectedEventArgs e)
         {
-            MessageBox.Show("fEhLEr!");
+            MessageBox.Show("Nicht erkannt!");
         }
 
         private void recognizer_Speechrecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            MessageBox.Show(e.Result.Text);
+            Lösungsbox.Text = e.Result.Text;
+            
         }
 
 
@@ -217,8 +220,9 @@ namespace Projekt_Europaquiz
 
         private void StartKnopf_Click(object sender, EventArgs e)
         {
-            Zeit = Opt.getZeit();
-            AnzahlLänder = Opt.getAnzahl();
+            Zeit = Optionen.Zeit;
+            AnzahlLänder = Optionen.Anzahl;
+
             resetFarbe();
             Punkte = 0;
             Bestätigen.Visible = true;
@@ -229,7 +233,7 @@ namespace Projekt_Europaquiz
             
             ZT.Start();
 
-
+           
 
         }
 
@@ -269,9 +273,11 @@ namespace Projekt_Europaquiz
                         PictureLichtenstein.Visible = false;
                         PictureMonaco.Visible = false;
                         PictureSanMarino.Visible = false;
-                        PictureVatikanstaat.Visible = false;
+                        PictureVatikanstadt.Visible = false;
+                        PictureMalta.Visible = false;
 
-                        Zeit = Opt.getZeit();
+                        Zeit = Optionen.Zeit;
+                        
                         ZT.Start();
                     }
                     else
@@ -284,13 +290,13 @@ namespace Projekt_Europaquiz
                         PictureLichtenstein.Visible = false;
                         PictureMonaco.Visible = false;
                         PictureSanMarino.Visible = false;
-                        PictureVatikanstaat.Visible = false;
+                        PictureVatikanstadt.Visible = false;
+                        PictureMalta.Visible = false;
 
                         if (AnzahlLänder > 0)
                         {
                             wähleLand();
-                            AnzahlLänder--;
-                            Zeit = Opt.getZeit();
+                            Zeit = Optionen.Zeit;
                             ZT.Start();
                         }
                         else
@@ -313,8 +319,7 @@ namespace Projekt_Europaquiz
                         if (AnzahlLänder > 0)
                         {
                             wähleLand();
-                            AnzahlLänder--;
-                            Zeit = Opt.getZeit();
+                            Zeit = Optionen.Zeit;
                             ZT.Start();
                         }
                         else
@@ -329,9 +334,8 @@ namespace Projekt_Europaquiz
                         Landerraten = false;
                         if (AnzahlLänder > 0)
                         {
-                            wähleLand();
-                            AnzahlLänder--;
-                            Zeit = Opt.getZeit();
+                            wähleLand(); 
+                            Zeit = Optionen.Zeit;
                             ZT.Start();
                         }
                         else
@@ -343,7 +347,7 @@ namespace Projekt_Europaquiz
             }
 
 
-            Zeit = Opt.getZeit();
+            Zeit = Optionen.Zeit;
         }
 
 
@@ -356,7 +360,8 @@ namespace Projekt_Europaquiz
             }
             Einfärben(1, 11, Länder[aktuellesLand].getNummer());
             Länder[aktuellesLand].setbenutzt(true);
-            if(Länder[aktuellesLand].getName()=="Färöer")
+            AnzahlLänder--;
+            if (Länder[aktuellesLand].getName()=="Färöer")
             {
                 PictureFäröer.Visible = true;
             }
@@ -372,13 +377,17 @@ namespace Projekt_Europaquiz
             {
                 PictureLichtenstein.Visible = true;
             }
-            if (Länder[aktuellesLand].getName() == "Vatikanstaat")
+            if (Länder[aktuellesLand].getName() == "Vatikanstadt")
             {
-                PictureVatikanstaat.Visible = true;
+                PictureVatikanstadt.Visible = true;
             }
             if (Länder[aktuellesLand].getName() == "San Marino")
             {
                 PictureSanMarino.Visible = true;
+            }
+            if (Länder[aktuellesLand].getName() == "Malta")
+            {
+                PictureMalta.Visible = true;
             }
         }
     }
