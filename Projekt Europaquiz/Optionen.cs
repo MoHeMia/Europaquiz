@@ -19,26 +19,26 @@ namespace Projekt_Europaquiz
         {
             InitializeComponent();
         }
-        public static int Zeit = 30;
-        public static int Anzahl = 10;
+        public static int Zeit = 30;        // Standartwert für die Zeit
+        public static int Anzahl = 10;      // Standart für die Anzahl der Länder
 
 
         private void Knopf_Click(object sender, EventArgs e)
         {
             try
             {
-                if (Convert.ToInt32(ZeitBox.Text) > 9)
+                if (Convert.ToInt32(ZeitBox.Text) > 9) //Zeit muss mindestens 10 betragen
                 {
-                    Zeit = Convert.ToInt32(ZeitBox.Text);
+                    Zeit = Convert.ToInt32(ZeitBox.Text);       //Setze neue Zeit
                     MessageBox.Show("Zeit geändert");
                 }
                 else
                 {
                     MessageBox.Show("Die Zeit muss mindestens 10 sein");
                 }
-                if (Convert.ToInt32(AnzahlBox.Text) > 0 && Convert.ToInt32(AnzahlBox.Text) < 49)
+                if (Convert.ToInt32(AnzahlBox.Text) > 0 && Convert.ToInt32(AnzahlBox.Text) < 49) // Anzahl der Länder muss zwichen 1 und 48 liegen
                 {
-                    Anzahl = Convert.ToInt32(AnzahlBox.Text);
+                    Anzahl = Convert.ToInt32(AnzahlBox.Text);           // Setze neue Anzahl
                     MessageBox.Show("Anzahl der Länder geändert");
                 }
                 else
@@ -55,12 +55,12 @@ namespace Projekt_Europaquiz
 
     
 
-        private void regelknopf_Click(object sender, EventArgs e)
+        private void regelknopf_Click(object sender, EventArgs e)           //Zeigt die Regeln bei Konpfdruck
         {
             MessageBox.Show("1.Land und Hauptstadt sind zu erraten." + Environment.NewLine + "2.Sie können entweder gesprochen oder eingetragen werden." + Environment.NewLine + "3.Die Eingabe muss mit [Bestätigen]im Zeitrahmen eingeloggt werden." + Environment.NewLine + "Es gibt Punkte für richtige Antworten." + Environment.NewLine + "Die Haupstadt kann nur erraten werden falls das Land Korrekt war.");
         }
 
-        private void Urkundeknopf_Click(object sender, EventArgs e)
+        private void Urkundeknopf_Click(object sender, EventArgs e)    //Schreibt Punkte und eingebenen Namen des Teilnehmers in PDF(im Moment nicht funktionstüchtig)
         {
             string formFile = Application.StartupPath + @"/Urkunde Konzept.pdf";
             string newFile = @"D:\\Urkunde.pdf";

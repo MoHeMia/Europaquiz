@@ -118,6 +118,7 @@
             this.Lösungsbox.Name = "Lösungsbox";
             this.Lösungsbox.Size = new System.Drawing.Size(143, 24);
             this.Lösungsbox.TabIndex = 8;
+            this.Lösungsbox.Visible = false;
             // 
             // Zeitanzeige
             // 
@@ -140,6 +141,7 @@
             this.Bestätigen.TabIndex = 10;
             this.Bestätigen.Text = "Bestätigen";
             this.Bestätigen.UseVisualStyleBackColor = true;
+            this.Bestätigen.Visible = false;
             this.Bestätigen.Click += new System.EventHandler(this.Bestätigen_Click);
             // 
             // LandHaupstadtBox
@@ -147,11 +149,12 @@
             this.LandHaupstadtBox.AutoSize = true;
             this.LandHaupstadtBox.BackColor = System.Drawing.Color.White;
             this.LandHaupstadtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LandHaupstadtBox.Location = new System.Drawing.Point(171, 102);
+            this.LandHaupstadtBox.Location = new System.Drawing.Point(148, 102);
             this.LandHaupstadtBox.Name = "LandHaupstadtBox";
-            this.LandHaupstadtBox.Size = new System.Drawing.Size(44, 18);
+            this.LandHaupstadtBox.Size = new System.Drawing.Size(100, 18);
             this.LandHaupstadtBox.TabIndex = 11;
-            this.LandHaupstadtBox.Text = "Land:";
+            this.LandHaupstadtBox.Text = "Land gesucht:";
+            this.LandHaupstadtBox.Visible = false;
             // 
             // GrußNachricht
             // 
@@ -198,7 +201,7 @@
             // 
             this.PictureSanMarino.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PictureSanMarino.Image = ((System.Drawing.Image)(resources.GetObject("PictureSanMarino.Image")));
-            this.PictureSanMarino.Location = new System.Drawing.Point(359, 629);
+            this.PictureSanMarino.Location = new System.Drawing.Point(371, 668);
             this.PictureSanMarino.Name = "PictureSanMarino";
             this.PictureSanMarino.Size = new System.Drawing.Size(97, 91);
             this.PictureSanMarino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

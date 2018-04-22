@@ -8,15 +8,15 @@ namespace Projekt_Europaquiz
 {
     class Land
     {
-        private int Nummer;
-        private string Name;
-        private string Haupstadt;
-        private int punkteHaupstadt;
-        private int punkteLand;
-        private int punkteBeides;
-        private bool benutzt = false;
+        private int Nummer;     //Nummer des Landes
+        private string Name;        // Name des Landes
+        private string Haupstadt;       // Haupstadt des Landes
+        private int punkteHaupstadt;        //Punkte für die Haupstadt
+        private int punkteLand;     //Punkte für das Land
+        private int punkteBeides;       //Punkte für Beides    
+        private bool benutzt = false;       //Land schon verwendet
 
-
+        //get- und set-Methoden für die Variabeln
         public int getNummer()
         {
             return Nummer;
