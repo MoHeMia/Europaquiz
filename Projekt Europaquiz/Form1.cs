@@ -250,6 +250,29 @@ namespace Projekt_Europaquiz
             {
                 Einfärben(11, 8, Länder[aktuellesLand].getNummer());
                 MessageBox.Show("Sie haben zulange gebraucht");
+
+                Lösungsbox.Text = "";           //leere Lösungsbox
+
+                // Setze die Zooms auf unsichtbar
+                PictureFäröer.Visible = false;
+                PictureAndorra.Visible = false;
+                PictureLichtenstein.Visible = false;
+                PictureMonaco.Visible = false;
+                PictureSanMarino.Visible = false;
+                PictureVatikanstadt.Visible = false;
+                PictureMalta.Visible = false;
+
+
+                if (AnzahlLänder > 0) //Wenn noch Länder erraten werden müssen
+                {
+                    wähleLand();        //starte WähleLand()
+                    Zeit = Optionen.Zeit;     //Resete die Zeit
+                    ZT.Start();         //Starte Timer
+                }
+                else
+                {
+                    MessageBox.Show("Ende!");    //Zeige Ende des Quiz an
+                }
             }
             else
             {
@@ -353,7 +376,7 @@ namespace Projekt_Europaquiz
             }
 
 
-            Zeit = Optionen.Zeit;
+            
         }
 
 
