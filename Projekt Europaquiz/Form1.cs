@@ -112,7 +112,7 @@ namespace Projekt_Europaquiz
             }
             catch
             {
-                MessageBox.Show("Feeeeeeehleeeeeer!");
+                MessageBox.Show("fEHleeEeeEeR!11!");
             }
 
             
@@ -396,7 +396,7 @@ namespace Projekt_Europaquiz
             Länder[aktuellesLand].setbenutzt(true);              //setze es auf benutzt
             AnzahlLänder--;                                      // ziehe von der Anzahl der zuerratenen Länder eins ab
 
-            // Zeige bei gegeben Ländern einen gezoomten auschnitt
+            // Zeige bei gegeben Ländern einen gezoomten Auschnitt
             if (Länder[aktuellesLand].getName()=="Färöer")
             {
                 PictureFäröer.Visible = true;

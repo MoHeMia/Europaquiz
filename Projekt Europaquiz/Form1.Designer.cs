@@ -149,7 +149,7 @@
             this.LandHaupstadtBox.AutoSize = true;
             this.LandHaupstadtBox.BackColor = System.Drawing.Color.White;
             this.LandHaupstadtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LandHaupstadtBox.Location = new System.Drawing.Point(148, 102);
+            this.LandHaupstadtBox.Location = new System.Drawing.Point(121, 102);
             this.LandHaupstadtBox.Name = "LandHaupstadtBox";
             this.LandHaupstadtBox.Size = new System.Drawing.Size(100, 18);
             this.LandHaupstadtBox.TabIndex = 11;
@@ -283,7 +283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1845, 1020);
+            this.ClientSize = new System.Drawing.Size(1684, 1020);
             this.Controls.Add(this.PictureMalta);
             this.Controls.Add(this.PictureMonaco);
             this.Controls.Add(this.PictureLichtenstein);
