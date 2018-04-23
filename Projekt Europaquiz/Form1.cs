@@ -92,11 +92,16 @@ namespace Projekt_Europaquiz
 
 
             //Sprachsteuerung 
-            
-            Recogn.SetInputToDefaultAudioDevice();
-            Recogn.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_Speechrecognized);
-            Recogn.SpeechRecognitionRejected += new EventHandler<SpeechRecognitionRejectedEventArgs>(recognizer_Speechnotrecognized);
-
+            try
+            {
+                Recogn.SetInputToDefaultAudioDevice();
+                Recogn.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_Speechrecognized);
+                Recogn.SpeechRecognitionRejected += new EventHandler<SpeechRecognitionRejectedEventArgs>(recognizer_Speechnotrecognized);
+            }
+            catch
+            {
+                MessageBox.Show("Mikrofon fehlt!");
+            }
             try
             {
                 Grammar Grammatik = new Grammar(Application.StartupPath + @"/grammar.xml", "LänderuStädte");
